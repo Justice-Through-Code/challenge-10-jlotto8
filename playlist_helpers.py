@@ -49,9 +49,10 @@ def play_track(playlist, track = 1):
     try:
         song = playlist[track -1]
         print(f'Now playing Track {track}: {song["title"]} by {song["artist"]}')
-        song["plays"]+= 1
+        song['plays'] += 1
     except IndexError:
-        print('Please enter a valid selection using the name of your playlist value')
+        return
+        # print('Please enter a valid selection')
 
     
     
